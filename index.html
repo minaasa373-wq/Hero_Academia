@@ -27,12 +27,13 @@ body.big{font-size:20px}body.contrast{background:#fff;color:#000}body.contrast .
 <header class="top"><div class="topin"><div class="brand"><div class="emblem">AI</div><div><b>僕のデザインアカデミア</b><small>CanvaとAIで創るブランドデザイン入門</small></div></div><div class="tools"><button type="button" onclick="document.body.classList.toggle('big')">文字を大きく</button><button type="button" onclick="document.body.classList.toggle('contrast')">くっきり表示</button><button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">一番上へ</button></div></div></header>
 <div class="layout">
 <aside class="side">
- <div class="courseCard"><strong>Day1・Day2</strong><p>Day1前半｜AI超入門<br>Day1後半｜Canva超入門<br>Day2前半｜新機能と時短術<br>Day2後半｜AI連携と実務活用</p><div class="miniNote">プルダウンは全部閉じた状態から開始。必要な場所だけ開けばOK。</div></div>
+ <div class="courseCard"><strong>Day1〜Day3</strong><p>Day1前半｜AI超入門<br>Day1後半｜Canva超入門<br>Day2前半｜新機能と時短術<br>Day2後半｜AI連携と実務活用<br>Day3前半｜4大原則と余白の使い方<br>Day3後半｜Canva AI実践とポスター制作</p><div class="miniNote">プルダウンは全部閉じた状態から開始。必要な場所だけ開けばOK。</div></div>
  <div class="tocTitle">授業メニュー</div>
  <details class="dayBlock"><summary><span>Day1前半｜AIの正体とGemini</span><i class="chev"></i></summary><nav class="links"><a href="#start">今日のゴール</a><a href="#ai">AIって何？</a><a href="#types">2種類のAI</a><a href="#works">AIの4能力</a><a href="#learn">どう学ぶ？</a><a href="#gemini">Geminiを使う</a><a href="#prompt">頼み方のコツ</a><a href="#image">画像生成</a><a href="#safe">注意点</a><a href="#mission">実習</a></nav></details>
  <details class="dayBlock"><summary><span>Day1後半｜Canvaの基本操作</span><i class="chev"></i></summary><nav class="links"><a href="#canva-start">Canvaって何？</a><a href="#canva-home">ホーム画面の見方</a><a href="#canva-template">テンプレートの使い方</a><a href="#canva-edit">素材・文字・写真の編集</a><a href="#canva-ai">AI機能の使いどころ</a><a href="#canva-save">保存・書き出し</a><a href="#canva-mission">実習ミッション</a></nav></details>
  <details class="dayBlock"><summary><span>Day2前半｜Canva 2026アップデート</span><i class="chev"></i></summary><nav class="links"><a href="#day2-start">アップデート全体像</a><a href="#day2-print">印刷とマジックレイヤー</a><a href="#day2-fast">作業を速くする便利機能</a><a href="#day2-ai">AI・教育・動画の新機能</a><a href="#day2-mission">実習ミッション</a></nav></details>
  <details class="dayBlock"><summary><span>Day2後半｜AI連携と実務活用</span><i class="chev"></i></summary><nav class="links"><a href="#day2-back-start">後半の全体像</a><a href="#day2-back-chatgpt">ChatGPT×Canvaで修正</a><a href="#day2-back-ideas">AIで案を増やす</a><a href="#day2-back-docs">資料・翻訳・発表</a><a href="#day2-back-video">動画・Web・整理</a><a href="#day2-back-mission">実習ミッション</a></nav></details>
+ <details class="dayBlock"><summary><span>Day3前半｜4大原則と余白の使い方</span><i class="chev"></i></summary><nav class="links"><a href="#day3-front-start">全体像</a><a href="#day3-front-core">近接と整列</a><a href="#day3-front-rc">反復とコントラスト</a><a href="#day3-front-space">余白と印象</a><a href="#day3-front-mission">実習ミッション</a></nav></details><details class="dayBlock"><summary><span>Day3後半｜Canva AI実践とポスター制作</span><i class="chev"></i></summary><nav class="links"><a href="#day3-back-start">全体像</a><a href="#day3-back-flow1">Canva AIで作る流れ</a><a href="#day3-back-flow2">ChatGPT→Canva→マジックレイヤー</a><a href="#day3-back-flow3">マジックスタジオと仕上げ</a><a href="#day3-back-mission">実習ミッション</a></nav></details>
  <details class="dayBlock"><summary><span>用語辞典</span><i class="chev"></i></summary><nav class="links"><a href="#glossary">AI・Canva・新機能</a></nav></details>
 </aside>
 <main class="main">
@@ -280,6 +281,61 @@ body.big{font-size:20px}body.contrast{background:#fff;color:#000}body.contrast .
    <div class="panel" style="margin-top:14px"><div class="dialogue"><div class="line"><div class="avatar"><img src="./ochaco_uraraka.png" alt="麗日お茶子"></div><div class="bubble"><div class="speaker"><b>麗日お茶子</b><span class="role">まとめ</span></div><p>AIに全部やってもらうんやなくて、面倒な部分を助けてもらって、最後は自分で確かめるんやね。</p></div></div><div class="line right"><div class="avatar"><img src="./midoriya_izuku.png" alt="緑谷出久"></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">最終まとめ</span></div><p>その通り。Day2後半の合格ラインは、<span class="term">AIで1案出し、1回直し、自分で確認して保存できること</span>だよ。</p></div></div></div></div>
   </section>
 
+  
+  <section class="section" id="day3-front-start"><h2>31. Day3前半スタート｜センスの前に、まずルール</h2><p class="lead">Canvaで見やすいデザインを作る近道は、感覚だけで並べることではなく、<span class="term">近接・整列・反復・コントラスト・余白</span>の5つを順番に確認すること。ここでは「なんとなく置く」を卒業する。</p>
+   <div class="panel"><span class="sceneLabel">SCENE 11｜見やすさには型がある</span><div class="dialogue">
+    <div class="line"><div class="avatar"><img src="./midoriya_izuku.png" alt="緑谷出久"></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">導入</span></div><p>デザインってセンス勝負に見えるけど、初心者こそルールを使うと一気に分かりやすくなるよ。まずは5つの基本を知ろう！</p></div></div>
+    <div class="line right"><div class="avatar"><img src="./ochaco_uraraka.png" alt="麗日お茶子"></div><div class="bubble"><div class="speaker"><b>麗日お茶子</b><span class="role">疑問</span></div><p>配置をちょっといじっても、何が正解なんか分からん時あるよね。そういう時に見る順番があると助かるわ。</p></div></div>
+    <div class="line"><div class="avatar"><img src="./momo_yaoyorozu.png" alt="八百万百"></div><div class="bubble"><div class="speaker"><b>八百万百</b><span class="role">整理</span></div><p>順番はシンプルですわ。<span class="term">近接 → 整列 → 反復 → コントラスト → 余白</span>です。これを使えば、チラシ・名刺・SNS画像でも土台が整います。</p><span class="easy">やさしく言うと：情報をまとめる → そろえる → ルールをくり返す → 大事な所を目立たせる → すき間で読みやすくする、の流れ。</span></div></div>
+   </div></div>
+   <div class="diagram"><img src="./day3_front_design_principles_overview.png" alt="Day3前半 デザイン4大原則と余白の全体像"><div class="cap">Day3前半の全体像。4大原則に「余白」と「ジャンプ率（大きさの差）」を加えて、見やすさの土台をまとめて確認する。</div></div>
+  </section>
+
+  <section class="section" id="day3-front-core"><h2>32. 近接と整列｜情報をまとめて、見えない線をそろえる</h2><p class="lead">近接は「仲間を近づける」、整列は「端や中心をそろえる」こと。ここが崩れると、どれだけ色や装飾を足しても読みにくくなりやすい。</p>
+   <div class="panel"><span class="sceneLabel">SCENE 12｜まずはバラバラをやめる</span><div class="dialogue">
+    <div class="line"><div class="avatar"><img src="./ochaco_uraraka.png" alt="麗日お茶子"></div><div class="bubble"><div class="speaker"><b>麗日お茶子</b><span class="role">疑問</span></div><p>タイトル、説明、日時、場所がある時って、とりあえず空いてる所に置きがちやねん。それが読みにくさの原因なん？</p></div></div>
+    <div class="line right"><div class="avatar"><img src="./katsuki_bakugo.png" alt="爆豪勝己"></div><div class="bubble"><div class="speaker"><b>爆豪勝己</b><span class="role">直球</span></div><p>そうだ。関係ある情報はまとめろ。関係ないグループは離せ。バラバラ配置は、それだけで見づらい。</p></div></div>
+    <div class="line"><div class="avatar"><img src="./momo_yaoyorozu.png" alt="八百万百"></div><div class="bubble"><div class="speaker"><b>八百万百</b><span class="role">手順</span></div><p>Canvaでは、まず情報を分けてから近づけます。その後、左端・中央・余白までそろえると、一気に整って見えますわ。</p><span class="easy">ポイント：近接は「グループづくり」、整列は「線をそろえる作業」。写真やアイコンだけでなく、余白もそろえる。</span></div></div>
+   </div></div>
+   <div class="diagram"><img src="./day3_front_proximity_alignment_workflow.png" alt="近接と整列のワークフロー"><div class="cap">情報を分ける → 関係あるものを近づける → 関係ないものを離す → 端や中心をそろえる → 余白を確認、の順で見ると迷いにくい。</div></div>
+   <div class="grid4"><div class="card"><b>近接</b><p>タイトルと説明、日時と場所など、つながる情報を近くに置く。</p></div><div class="card"><b>整列</b><p>左端・中央・右端のどこにそろえるかを決め、見えない線を作る。</p></div><div class="card"><b>余白で区切る</b><p>線や飾りを増やさなくても、すき間だけでグループを分けられる。</p></div><div class="card"><b>初心者のコツ</b><p>迷ったらまず左揃え。文章が多い時ほど安定して読みやすい。</p></div></div>
+   <div class="warning"><b>注意：</b>素材の飾り付けを先に始めると、土台のズレに気づきにくい。最初は装飾より、位置関係と揃え方を優先する。</div>
+  </section>
+
+  <section class="section" id="day3-front-rc"><h2>33. 反復とコントラスト｜統一感を作り、主役を目立たせる</h2><p class="lead">反復は「同じルールをくり返す」こと。コントラストは「差を作って視線を集める」こと。2つを一緒に使うと、まとまりと伝わりやすさが両立しやすい。</p>
+   <div class="panel"><span class="sceneLabel">SCENE 13｜全部目立たせると、逆に何も伝わらない</span><div class="dialogue">
+    <div class="line"><div class="avatar"><img src="./midoriya_izuku.png" alt="緑谷出久"></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">基本</span></div><p>色・フォント・カードの形・余白をそろえると、見ている人が安心して読める。これが反復の力だよ。</p></div></div>
+    <div class="line right"><div class="avatar"><img src="./shoto_todoroki.png" alt="轟焦凍"></div><div class="bubble"><div class="speaker"><b>轟焦凍</b><span class="role">補足</span></div><p>その上で、一番伝えたい情報だけ大きく、濃く、広く扱う。全部同じ強さにすると、主役が消える。</p></div></div>
+    <div class="line"><div class="avatar"><img src="./katsuki_bakugo.png" alt="爆豪勝己"></div><div class="bubble"><div class="speaker"><b>爆豪勝己</b><span class="role">強調</span></div><p>「全部目立たせる」は失敗の定番だ。主役は1つ。ほかは脇役。このメリハリがコントラストってわけだ。</p><span class="easy">ジャンプ率（大きい要素と小さい要素の差）が高いほど、SNSやサムネ向きの強い見た目になりやすい。</span></div></div>
+   </div></div>
+   <div class="diagram"><img src="./day3_front_repetition_contrast_workflow.png" alt="反復とコントラストのワークフロー"><div class="cap">色を決める → 文字ルールを決める → カードや余白をそろえる → 主役を1つ決める → 差を大きくする。この流れで整えると、伝わるデザインになりやすい。</div></div>
+   <div class="grid4"><div class="card"><b>反復するもの</b><p>色、フォント、見出しサイズ、配置、カードの形、余白幅。</p></div><div class="card"><b>主役を決める</b><p>一番見せたい言葉、日付、価格、ボタンなどを1つ選ぶ。</p></div><div class="card"><b>差を作る</b><p>大きさ・色・余白・太さの差を、誰が見ても分かるくらい作る。</p></div><div class="card"><b>ジャンプ率</b><p>高いと元気・強い印象、低いと上品・落ち着いた印象になる。</p></div></div>
+   <div class="success"><b>コツ：</b>「そろえる所」と「目立たせる所」を分けて考えると失敗しにくい。全体は整え、主役だけ差をつける。</div>
+  </section>
+
+  <section class="section" id="day3-front-space"><h2>34. 余白｜空いている場所もデザインの一部</h2><p class="lead">余白は何もない空間ではなく、情報整理・視線誘導・印象づくりを担う大事な要素。広い余白は上品さや落ち着きを、狭い余白は勢いやにぎやかさを作る。</p>
+   <div class="panel"><span class="sceneLabel">SCENE 14｜余白は「もったいない空き」じゃない</span><div class="dialogue">
+    <div class="line"><div class="avatar"><img src="./ochaco_uraraka.png" alt="麗日お茶子"></div><div class="bubble"><div class="speaker"><b>麗日お茶子</b><span class="role">本音</span></div><p>空いてる所を見ると、つい何か入れたくなるんよね。でも、それでごちゃつくことも多い気がする…。</p></div></div>
+    <div class="line right"><div class="avatar"><img src="./momo_yaoyorozu.png" alt="八百万百"></div><div class="bubble"><div class="speaker"><b>八百万百</b><span class="role">解説</span></div><p>余白は、見せたい情報のまわりに静かな空間を作る役目です。文字間（レタースペーシング：字と字のすき間）や行間（ラインハイト：行と行のすき間）も余白の一部ですわ。</p></div></div>
+    <div class="line"><div class="avatar"><img src="./shoto_todoroki.png" alt="轟焦凍"></div><div class="bubble"><div class="speaker"><b>轟焦凍</b><span class="role">整理</span></div><p>余白があると、視線が迷いにくい。写真のまわりに空間があるだけでも、落ち着いた印象になる。逆に詰めると、迫力や勢いが出る。</p><span class="easy">目安：文字間は文字サイズの約5〜10％、行間は文字サイズの約150〜200％くらいを基準にすると調整しやすい。</span></div></div>
+   </div></div>
+   <div class="diagram"><img src="./day3_front_whitespace_impression_workflow.png" alt="余白と印象のワークフロー"><div class="cap">主役を決める → グループを作る → 余白の量をそろえる → 文字間と行間を整える → 印象を調整する。余白は最後の微調整ではなく、最初から考える。</div></div>
+   <div class="grid4"><div class="card"><b>情報整理</b><p>グループごとにすき間を分けると、区切りが自然に伝わる。</p></div><div class="card"><b>視線誘導</b><p>主役のまわりに余白を作ると、目が集まりやすくなる。</p></div><div class="card"><b>印象づくり</b><p>広い余白は高級感、狭い余白は活気や安さの印象を出しやすい。</p></div><div class="card"><b>写真の余白</b><p>被写体の周囲に空間があると上品、少ないと迫力が出る。</p></div></div>
+   <div class="warning"><b>注意：</b>文章を詰め込みすぎると、読めても疲れる。余白を削る前に「この情報は本当に必要か」を見直す。</div>
+  </section>
+
+  <section class="section" id="day3-front-mission"><h2>35. Day3前半 実習ミッション</h2><div class="practice"><b>MISSION｜1枚のデザインを5つの視点で直す</b><ol><li>Canvaで、過去に作ったSNS画像・チラシ・お知らせのどれか1枚を開く。</li><li>タイトル、本文、日時、場所などの情報をグループに分ける。</li><li>左端または中央線を決めて、文字・写真・余白をそろえる。</li><li>色・フォント・カードの見た目をそろえ、主役を1つ決める。</li><li>主役の大きさ・色・余白に差をつけて目立たせる。</li><li>最後に、文字間・行間・周囲の余白を調整して保存する。</li></ol></div>
+   <div class="practice" style="margin-top:14px"><b>セルフチェック用メモ</b><div class="prompt" id="day3Check">Day3前半の見直し順：
+1. 近接：関係ある情報は近く、関係ない情報は離れているか？
+2. 整列：左端・中央・余白がそろっているか？
+3. 反復：色・フォント・カードのルールはそろっているか？
+4. コントラスト：一番伝えたい情報が、ひと目で分かるか？
+5. 余白：読みやすいすき間があり、詰め込みすぎていないか？
+
+迷ったら「1つ削る・1つそろえる・1つ目立たせる」から始める。</div><button class="copy" type="button" onclick="copyText('day3Check',this)">チェックをコピー</button></div>
+   <div class="panel" style="margin-top:14px"><div class="dialogue"><div class="line"><div class="avatar"><img src="./momo_yaoyorozu.png" alt="八百万百"></div><div class="bubble"><div class="speaker"><b>八百万百</b><span class="role">まとめ</span></div><p>Day3前半の合格ラインは、派手な作品を作ることではありません。<span class="term">1枚のデザインをルールで見直せること</span>ですわ。</p></div></div><div class="line right"><div class="avatar"><img src="./midoriya_izuku.png" alt="緑谷出久"></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">締め</span></div><p>うん！ デザインが急に上手く見える時って、実は小さなルールがちゃんと働いてる時なんだ。次はこの考え方を作品づくりに使っていこう！</p></div></div></div></div>
+  </section>
+
   <section class="section glossary" id="glossary"><h2>用語辞典｜分からなくなったらここだけ開く</h2>
    <details><summary><span>AI（人工知能）</span><i class="chev"></i></summary><div>人の考える・見分ける・予測する・作る作業を、コンピューターに手伝わせる技術。</div></details>
    <details><summary><span>生成AI</span><i class="chev"></i></summary><div>文章・画像・音楽・プログラムなど、新しい内容を作るAI。</div></details>
@@ -301,10 +357,49 @@ body.big{font-size:20px}body.contrast{background:#fff;color:#000}body.contrast .
    <details><summary><span>Canva Sheets</span><i class="chev"></i></summary><div>Canva内で表やリスト、データを整理する表計算機能。</div></details>
    <details><summary><span>Canva Docs</span><i class="chev"></i></summary><div>文章や資料をページ形式で作る文書作成機能。</div></details>
    <details><summary><span>Magic Translate</span><i class="chev"></i></summary><div>デザイン内の文章やプレゼン用メモを別の言語へ翻訳するAI機能。</div></details>
+
+   <details><summary><span>近接</span><i class="chev"></i></summary><div>関係のある情報を近くに置き、関係のない情報は離して見せる考え方。</div></details>
+   <details><summary><span>整列</span><i class="chev"></i></summary><div>文字や写真の端、中心、余白をそろえ、見えない線を作ること。</div></details>
+   <details><summary><span>反復</span><i class="chev"></i></summary><div>色・フォント・配置・余白などのルールをくり返し、統一感を出すこと。</div></details>
+   <details><summary><span>コントラスト</span><i class="chev"></i></summary><div>大きさ・色・余白・太さの差を使って、重要な情報を目立たせること。</div></details>
+   <details><summary><span>余白</span><i class="chev"></i></summary><div>何もない空きではなく、情報整理・視線誘導・印象づくりを担当するスペース。</div></details>
+   <details><summary><span>ジャンプ率</span><i class="chev"></i></summary><div>大きい要素と小さい要素の差のこと。高いと強い印象、低いと落ち着いた印象になりやすい。</div></details>
+   <details><summary><span>レタースペーシング（文字間）</span><i class="chev"></i></summary><div>文字と文字の間隔。詰めすぎると読みにくく、空けすぎるとまとまりが弱くなる。</div></details>
+   <details><summary><span>ラインハイト（行間）</span><i class="chev"></i></summary><div>行と行の間のスペース。狭いと窮屈、広すぎると文章が分断されて見えやすい。</div></details>
   </section>
-  <section class="section"><div class="sourceBox"><b>参考資料</b><br>この教材は、ユーザー提供のAI・Gemini・画像生成に関する要点と、指定されたYouTube動画3本をもとに、初心者向けへ再構成した。動画の画面やGeminiのボタン名は更新で変わる場合がある。<br><a href="https://www.youtube.com/watch?v=6IOUAYuQO4U&list=PLf4LaMEmm4YE&index=1" target="_blank" rel="noopener">参考動画1</a> ／ <a href="https://www.youtube.com/watch?v=ckE0WoKYBmc&list=PLf4LaMEmm4YE&index=2" target="_blank" rel="noopener">参考動画2</a> ／ <a href="https://www.youtube.com/watch?v=jcEU1d1OuY0&list=PLf4LaMEmm4YE&index=3" target="_blank" rel="noopener">参考動画3</a> ／ <a href="https://www.youtube.com/watch?v=nRds9qeaLiM&list=PLHrwvHqySKPk&index=1" target="_blank" rel="noopener">参考動画4（Canva基礎）</a> ／ <a href="https://www.youtube.com/watch?v=uumr0BVAJE4&list=PLA6d2w85gAF8&index=1" target="_blank" rel="noopener">参考動画5（Canva新機能）</a> ／ <a href="https://www.youtube.com/watch?v=EgVgIl1h6mg&list=PLA6d2w85gAF8&index=2" target="_blank" rel="noopener">参考動画6（Canva便利機能）</a> ／ <a href="https://www.youtube.com/watch?v=PfJwC6hCuNs&list=PLG2AgWxdQGfE&index=1" target="_blank" rel="noopener">参考動画7（Canva AI新機能）</a> ／ <a href="https://www.youtube.com/watch?v=1jkRK9kgXuY&list=PLG2AgWxdQGfE&index=2" target="_blank" rel="noopener">参考動画8（ChatGPT×Canva）</a> ／ <a href="https://www.youtube.com/watch?v=FFvBQ7j3hRg&list=PLG2AgWxdQGfE&index=3" target="_blank" rel="noopener">参考動画9（Canva Create）</a></div></section>
+
+  <section class="section" id="day3-back-start"><h2>36. Day3後半スタート｜AIを味方にして、伝わるポスターを作る</h2><p class="lead">Day3後半では、<span class="term">Canva AI（Canva内で相談できるAI機能）</span>と、<span class="term">ChatGPT</span>、そして<span class="term">マジックレイヤー（画像を文字・人物・背景などに分けて編集しやすくする機能）</span>を使って、ポスター制作を短く・ラクに・わかりやすく進める。ポイントは、AIに丸投げすることではなく、<span class="term">AIで案を出し、人が伝わる形に整える</span>ことだ。</p>
+   <div class="panel"><div class="dialogue"><div class="line"><div class="avatar"><img src="./midoriya_izuku.png" alt="緑谷出久"></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">導入</span></div><p>AIって、ゼロから考えるのが苦手な時にすごく助かるんだ。タイトル案、構成案、雰囲気の提案まで、一緒に考えてくれる！</p><span class="easy">かんたんに言うと：<b>最初の一歩をAIが手伝う</b>ってこと。</span></div></div><div class="line right"><div class="avatar"><img src="./ochaco_uraraka.png" alt="麗日お茶子"></div><div class="bubble"><div class="speaker"><b>麗日お茶子</b><span class="role">ポイント</span></div><p>でも最後は、人の目で見やすさを整えるのが大事やで。文字の位置、余白、CTA（行動をうながすボタンや文言）を直すと、グッと伝わりやすくなる！</p></div></div></div></div>
+   <div class="grid3"><div class="goal"><b>今日のゴール1</b>Canva AIに相談しながら、ポスターの土台を作れるようになる。</div><div class="goal"><b>今日のゴール2</b>ChatGPTでラフ案を出し、Canvaで実務向けに整える流れを理解する。</div><div class="goal"><b>今日のゴール3</b>マジックスタジオとマジックレイヤーを使い分けて、見やすい完成形まで仕上げる。</div></div>
+   <div class="diagram"><img src="./day3_back_canva_ai_overview.png" alt="Day3後半 Canva AI実践の全体像"><div class="cap">Day3後半の全体像。Canva AIに相談して案を出し、ChatGPTのラフ案も活用しながら、マジックレイヤーとマジックスタジオで整えて、最後に人の判断で仕上げる流れをまとめた。</div></div></section>
+
+  <section class="section" id="day3-back-flow1"><h2>37. Canva AIでポスターを作る流れ｜まずは中で相談する</h2><p class="lead">Canvaの中だけでも、ポスター制作はかなり進められる。大事なのは、いきなり飾りから始めるのではなく、<span class="term">サイズ→基本情報→AI相談→提案確認→配置</span>の順で進めること。</p>
+   <div class="diagram"><img src="./day3_back_canva_ai_poster_workflow.png" alt="Canva AIでポスターを作る流れ"><div class="cap">ワークフロー1。A0などのサイズを決め、タイトル・日時・場所・対象を整理してからCanva AIに相談すると、コピー案・レイアウト案・雰囲気案が出やすくなる。</div></div>
+   <div class="grid2"><div class="card"><h3>この順番でやる理由</h3><ul><li><b>サイズを先に決める</b>：あとで組み直しにくくなるのを防ぐ。</li><li><b>必要情報を先に整理する</b>：タイトル、日時、場所、対象がブレなくなる。</li><li><b>AIに相談する</b>：コピー、色味、雰囲気、構成の候補が一気に増える。</li><li><b>見やすく配置する</b>：最後に人が「読みやすさ」を整える。</li></ul></div><div class="card"><h3>Canva AIに聞く例</h3><ul><li>このイベントに合うキャッチコピーを3つ考えて</li><li>家族向けで、やさしい雰囲気の配色を提案して</li><li>タイトル・日時・場所が見やすい配置を教えて</li><li>スイーツフェアに合うフォントを教えて</li></ul></div></div>
+   <div class="success"><b>コツ</b>：AIに聞く時は、「何を作るか」「誰向けか」「どんな印象にしたいか」を入れると、提案がかなりマシになる。AIも丸腰だと迷子になる。人間と同じだ。</div></section>
+
+  <section class="section" id="day3-back-flow2"><h2>38. ChatGPT→Canva→マジックレイヤー｜AIの案を実用品へ育てる</h2><p class="lead">ChatGPTは、ラフ案（たたき台）づくりが得意。Canvaは、その案を実際のデザインにして、細かく修正するのが得意。さらにマジックレイヤーを使うと、1枚画像のままでは難しい修正がやりやすくなる。</p>
+   <div class="diagram"><img src="./day3_back_chatgpt_canva_magiclayer_workflow.png" alt="ChatGPTからCanva、マジックレイヤーの流れ"><div class="cap">ワークフロー2。ChatGPTでラフ案を作り、Canvaに入れてからマジックレイヤーで分解。文字・人物・商品・背景・CTAを必要なところだけ直して、実務で使える見た目へ近づける。</div></div>
+   <div class="grid2"><div class="warning"><b>AIだけだと困りやすいこと</b><ul><li>文字の位置がズレる</li><li>CTAが目立たない</li><li>人物や商品が小さい</li><li>不要な装飾が多い</li><li>フォントが微妙に合わない</li></ul></div><div class="card"><h3>マジックレイヤーで直せること</h3><ul><li>文字だけ移動・サイズ変更</li><li>人物や商品の大きさを調整</li><li>背景の色味や雰囲気を変更</li><li>不要な飾りを削除</li><li>CTAの色を変えて目立たせる</li></ul></div></div>
+   <div class="panel" style="margin-top:14px"><div class="dialogue"><div class="line"><div class="avatar"><img src="./shoto_todoroki.png" alt="飯田天哉" onerror="this.src='./shoto_todoroki.png'"></div><div class="bubble"><div class="speaker"><b>飯田天哉</b><span class="role">整理</span></div><p>重要なのは、全部を作り直すのではなく、<span class="term">直したい場所だけ触る</span>ことだ！ これが時短につながる。</p></div></div><div class="line right"><div class="avatar"><img src="./katsuki_bakugo.png" alt="爆豪勝己"></div><div class="bubble"><div class="speaker"><b>爆豪勝己</b><span class="role">本音</span></div><p>AIは速い。でも雑なまま出したら意味ねぇ。CTAとタイトルが目立ってるか、そこだけでも必ず見直せ。</p></div></div></div></div></section>
+
+  <section class="section" id="day3-back-flow3"><h2>39. マジックスタジオと仕上げのコツ｜最後の一押しをする</h2><p class="lead">マジックスタジオは、画像加工の便利道具セットみたいなもの。背景除去、切り抜き、消しゴム、拡張を使えば、素材を整えやすくなる。最後はフォント、余白、誤字、CTAの目立ち方まで確認して完成。</p>
+   <div class="diagram"><img src="./day3_back_magicstudio_finish_workflow.png" alt="マジックスタジオと仕上げのコツ"><div class="cap">ワークフロー3。背景除去・切り抜き・消しゴム・拡張で素材を整え、文字デザインや見やすさを調整。最後は人の目でチェックして仕上げる。</div></div>
+   <div class="grid4"><div class="card"><b>背景除去</b><p>商品や人物だけを目立たせたい時に使う。</p></div><div class="card"><b>マジック切り抜き</b><p>必要な部分だけ取り出して、好きな場所へ置ける。</p></div><div class="card"><b>マジック消しゴム</b><p>邪魔な写り込みや余計な要素を消せる。</p></div><div class="card"><b>マジック拡張</b><p>画像の外側を広げて、SNSや印刷サイズに合わせやすくする。</p></div></div>
+   <div class="grid2"><div class="card"><h3>仕上げで見る場所</h3><ul><li>タイトルは一番先に読めるか</li><li>日時・場所はすぐ見つかるか</li><li>CTAは押したくなる色と位置か</li><li>余白がなくて窮屈になっていないか</li><li>誤字・数字ミスはないか</li></ul></div><div class="card"><h3>AIと人の役割分担</h3><ul><li><b>AI</b>：アイデア出し、コピー案、素材加工、雰囲気提案</li><li><b>人</b>：情報整理、優先順位づけ、最終判断、伝わりやすさの調整</li></ul><p style="margin-top:8px">AIは助手。最後の監督は人間。そこを忘れなければかなり強い。</p></div></div></section>
+
+  <section class="section" id="day3-back-mission"><h2>40. Day3後半 実習ミッション</h2><div class="practice"><b>MISSION｜AIとCanvaで1枚のポスターを完成させる</b><ol><li>CanvaでA4かA0のポスターを新規作成する。</li><li>テーマを1つ決める（例：スイーツフェア、夏セール、学校イベント）。</li><li>タイトル・日時・場所・対象をメモする。</li><li>Canva AIに「キャッチコピー」「配色」「フォント」「レイアウト案」を聞く。</li><li>必要ならChatGPTでもラフ案や文言案を作る。</li><li>Canvaで配置し、マジックレイヤーで文字やCTAを修正する。</li><li>マジックスタジオで背景除去や不要物削除を試す。</li><li>最後に、タイトル・日時・CTA・余白・誤字を見直して保存する。</li></ol></div>
+   <div class="practice" style="margin-top:14px"><b>コピペ用の相談文</b><div class="prompt" id="day3BackPrompt">Canvaでポスターを作りたいです。
+テーマは「スイーツフェア」です。
+ターゲットは家族連れです。
+必要な情報は、タイトル・日時・場所・内容です。
+やさしく温かい雰囲気で、見やすいポスターにしたいです。
+キャッチコピーを3案、配色案、フォント案、レイアウト案を初心者向けにわかりやすく提案してください。</div><button class="copy" data-copy="#day3BackPrompt">相談文をコピー</button></div>
+   <div class="panel" style="margin-top:14px"><div class="dialogue"><div class="line"><div class="avatar"><img src="./momo_yaoyorozu.png" alt="八百万百"></div><div class="bubble"><div class="speaker"><b>八百万百</b><span class="role">まとめ</span></div><p>Day3後半の合格ラインは、AIを使うこと自体ではありません。<span class="term">AIの提案を使って、伝わる1枚へ整えられること</span>ですわ。</p></div></div><div class="line right"><div class="avatar"><img src="./midoriya_izuku.png" alt="緑谷出久"></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">締め</span></div><p>うん！ AIがたたき台を作ってくれるから、僕たちは「どう伝えるか」に集中できるんだ。これでポスター制作のスピードがかなり上がるはず！</p></div></div></div></div></section>
+
+  <section class="section"><div class="sourceBox"><b>参考資料</b><br>この教材は、ユーザー提供のAI・Gemini・画像生成に関する要点と、指定されたYouTube動画3本をもとに、初心者向けへ再構成した。動画の画面やGeminiのボタン名は更新で変わる場合がある。<br><a href="https://www.youtube.com/watch?v=6IOUAYuQO4U&list=PLf4LaMEmm4YE&index=1" target="_blank" rel="noopener">参考動画1</a> ／ <a href="https://www.youtube.com/watch?v=ckE0WoKYBmc&list=PLf4LaMEmm4YE&index=2" target="_blank" rel="noopener">参考動画2</a> ／ <a href="https://www.youtube.com/watch?v=jcEU1d1OuY0&list=PLf4LaMEmm4YE&index=3" target="_blank" rel="noopener">参考動画3</a> ／ <a href="https://www.youtube.com/watch?v=nRds9qeaLiM&list=PLHrwvHqySKPk&index=1" target="_blank" rel="noopener">参考動画4（Canva基礎）</a> ／ <a href="https://www.youtube.com/watch?v=uumr0BVAJE4&list=PLA6d2w85gAF8&index=1" target="_blank" rel="noopener">参考動画5（Canva新機能）</a> ／ <a href="https://www.youtube.com/watch?v=EgVgIl1h6mg&list=PLA6d2w85gAF8&index=2" target="_blank" rel="noopener">参考動画6（Canva便利機能）</a> ／ <a href="https://www.youtube.com/watch?v=PfJwC6hCuNs&list=PLG2AgWxdQGfE&index=1" target="_blank" rel="noopener">参考動画7（Canva AI新機能）</a> ／ <a href="https://www.youtube.com/watch?v=1jkRK9kgXuY&list=PLG2AgWxdQGfE&index=2" target="_blank" rel="noopener">参考動画8（ChatGPT×Canva）</a> ／ <a href="https://www.youtube.com/watch?v=FFvBQ7j3hRg&list=PLG2AgWxdQGfE&index=3" target="_blank" rel="noopener">参考動画9（Canva Create）</a> ／ <a href="https://www.youtube.com/watch?v=Bj8sbgkN8sc&list=PLCcxPerqp2Dg&index=1" target="_blank" rel="noopener">参考動画10（4大原則）</a> ／ <a href="https://www.youtube.com/watch?v=7uCZ7kPAysM&list=PLCcxPerqp2Dg&index=2" target="_blank" rel="noopener">参考動画11（余白）</a> ／ <a href="https://www.youtube.com/watch?v=EwXQ0CfPNYE&list=PLe9RJ60JoS4g&index=1" target="_blank" rel="noopener">参考動画12（Canva AIポスター制作）</a> ／ <a href="https://www.youtube.com/watch?v=MVPQXPVSA4M&list=PLe9RJ60JoS4g&index=2" target="_blank" rel="noopener">参考動画13（ChatGPT×Canva×マジックレイヤー）</a></div></section>
  </div>
- <div class="footer">Day1前半・後半／Day2前半・後半｜僕のデザインアカデミア　画像は同じフォルダ内のPNGを参照</div>
+ <div class="footer">Day1前半・後半／Day2前半・後半／Day3前半・後半｜僕のデザインアカデミア　画像は同じフォルダ内のPNGを参照</div>
 </main>
 <aside class="cast"><h3>登場人物</h3>
  <div class="castCard"><img src="./midoriya_izuku.png" alt="緑谷出久"><div><b>緑谷出久</b><span>初心者と一緒に実践し、最後に要点をまとめる。</span></div></div>
