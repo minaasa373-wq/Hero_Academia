@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>僕のデザインアカデミア｜ヒロアカ午後 Day7前半・後半</title>
+<style>
+
+:root{
+ --green:#06483b;--green2:#0a745c;--yellow:#ffd21c;--orange:#f05a24;--red:#d92f35;
+ --ink:#172420;--muted:#586a64;--paper:#f7f3df;--white:#fff;--line:#193e36;
+ --shadow:0 14px 34px rgba(0,40,32,.18);--radius:24px;
+ --font:system-ui,-apple-system,"Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:var(--font);color:var(--ink);background:
+ radial-gradient(circle at 12px 12px,rgba(6,72,59,.09) 0 2px,transparent 2px) 0 0/24px 24px,
+ linear-gradient(135deg,#efe9cf,#f9f7ea 45%,#e6f3ee);min-height:100vh;font-size:17px;line-height:1.85}
+body.big{font-size:20px}body.contrast{background:#fff;color:#000}body.contrast .card,body.contrast .bubble,body.contrast .panel,body.contrast .dayBlock{border-color:#000;box-shadow:none}
+.top{position:sticky;top:0;z-index:20;background:rgba(4,48,41,.96);color:white;border-bottom:6px solid var(--yellow);box-shadow:0 8px 22px rgba(0,0,0,.2)}
+.topin{width:min(1500px,calc(100% - 24px));margin:auto;padding:12px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;gap:14px;align-items:center}.emblem{width:66px;height:66px;display:grid;place-items:center;background:var(--yellow);color:var(--green);border:4px solid white;clip-path:polygon(50% 0,95% 18%,100% 70%,50% 100%,0 70%,5% 18%);font-weight:1000;font-size:25px}.brand b{display:block;font-size:clamp(20px,2.5vw,34px);line-height:1.15}.brand small{color:#d8fff2}.tools{display:flex;gap:8px;flex-wrap:wrap}.tools button{border:2px solid white;border-radius:999px;background:#fff;color:var(--green);padding:8px 12px;font-weight:900;cursor:pointer}
+.layout{width:min(1500px,calc(100% - 24px));margin:18px auto 40px;display:grid;grid-template-columns:290px minmax(0,1fr) 290px;gap:18px}.side,.cast{position:sticky;top:98px;max-height:calc(100vh - 118px);overflow:auto;background:rgba(255,255,255,.92);border:3px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:14px}.main{min-width:0}.courseCard{background:linear-gradient(145deg,var(--green),#09352f);color:white;border:4px solid #fff;border-radius:24px;padding:18px;box-shadow:var(--shadow)}.courseCard strong{font-size:36px}.courseCard p{margin:.5em 0}.miniNote{font-size:13px;color:#dff8ee}.tocTitle{font-weight:1000;margin:18px 4px 8px}.dayBlock{background:#fff;border:3px solid var(--line);border-radius:20px;margin:10px 0;overflow:hidden;box-shadow:0 7px 16px rgba(0,45,35,.10)}summary{list-style:none;cursor:pointer;padding:15px 16px;font-weight:1000;display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(90deg,#fff,#fff9d7)}summary::-webkit-details-marker{display:none}.dayBlock[open]>summary{background:var(--yellow)}.chev{width:12px;height:12px;border-right:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(45deg);transition:.2s}.dayBlock[open] .chev{transform:rotate(-135deg)}.links{display:grid;gap:7px;padding:12px}.links a{text-decoration:none;color:var(--green);font-weight:800;padding:9px 11px;border:1px solid #cbd8d4;border-radius:12px;background:#f5fbf8}.links a:hover{background:#e7fff6}
+.hero{position:relative;overflow:hidden;background:#fff;border:4px solid var(--line);border-radius:30px;box-shadow:var(--shadow);margin-bottom:18px}.heroHead{background:linear-gradient(120deg,var(--green),var(--green2));padding:22px;color:white;border-bottom:7px solid var(--yellow)}.eyebrow{display:inline-block;background:var(--yellow);color:var(--green);padding:5px 12px;border-radius:999px;font-weight:1000}.hero h1{font-size:clamp(30px,4vw,55px);line-height:1.25;margin:.35em 0}.hero p{font-size:19px;margin:0}.heroVisual{padding:14px;background:#f8f4df}.heroVisual img{display:block;width:100%;max-height:720px;object-fit:contain;border-radius:20px;cursor:zoom-in}.goalGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px}.goal{border:2px solid var(--line);border-radius:18px;padding:14px;background:#fff}.goal b{display:block;color:var(--green);font-size:20px}.content{background:rgba(255,255,255,.88);border:4px solid var(--line);border-radius:30px;box-shadow:var(--shadow);padding:20px clamp(14px,2vw,28px) 30px}.section{margin-top:24px;padding-top:24px;border-top:4px dashed #d4c95d;scroll-margin-top:105px}.section:first-child{margin-top:0;padding-top:0;border-top:0}.section h2{font-size:clamp(25px,3vw,40px);line-height:1.35;margin:0 0 10px;color:var(--green)}.lead{color:var(--muted);margin:0 0 14px}.panel{background:#fff;border:3px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 8px 18px rgba(0,40,32,.08)}.sceneLabel{display:inline-block;background:var(--orange);color:white;font-weight:1000;padding:5px 11px;border-radius:8px;transform:skew(-7deg);margin-bottom:14px}.dialogue{display:grid;gap:14px}.line{display:grid;grid-template-columns:80px minmax(0,1fr);gap:12px;align-items:start}.line.right{grid-template-columns:minmax(0,1fr) 80px}.line.right .avatar{grid-column:2}.line.right .bubble{grid-column:1;grid-row:1}.avatar{width:80px;height:80px;border-radius:18px;overflow:hidden;border:3px solid var(--line);background:var(--yellow);box-shadow:0 5px 12px rgba(0,0,0,.14)}.avatar img{width:100%;height:100%;object-fit:cover}.bubble{position:relative;background:#fff;border:3px solid var(--line);border-radius:20px;padding:12px 15px;box-shadow:0 5px 12px rgba(0,40,32,.07)}.bubble:before{content:"";position:absolute;left:-12px;top:24px;width:20px;height:20px;background:#fff;border-left:3px solid var(--line);border-bottom:3px solid var(--line);transform:rotate(45deg)}.line.right .bubble:before{left:auto;right:-12px;transform:rotate(225deg)}.speaker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:4px}.speaker b{font-size:18px}.role{font-size:12px;background:var(--green);color:white;border-radius:999px;padding:3px 8px;font-weight:900}.bubble p{margin:0}.easy{display:block;margin-top:7px;padding:8px 10px;background:#fff5b9;border-left:6px solid var(--yellow);border-radius:10px;font-weight:700}.term{font-weight:1000;color:#bf2a2f;border-bottom:2px dotted #bf2a2f}.grid2,.grid3,.grid4{display:grid;gap:14px;margin-top:14px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}.card{background:#fff;border:3px solid var(--line);border-radius:22px;padding:15px;box-shadow:0 7px 14px rgba(0,40,32,.07)}.card h3,.card b{display:block;margin:0 0 7px;color:var(--green);font-size:20px}.card p,.card ul{margin:0}.card ul{padding-left:1.2em}.icon{font-size:38px}.warning{background:#fff0ec;border:3px solid #b82b31;border-radius:22px;padding:15px;margin-top:14px}.warning b{color:#9d151b}.success{background:#effff4;border:3px solid #16805d;border-radius:22px;padding:15px;margin-top:14px}.diagram{margin-top:15px;border:4px solid var(--line);border-radius:25px;background:#fff;overflow:hidden}.diagram img{display:block;width:100%;height:auto;cursor:zoom-in}.cap{padding:11px 14px;background:#f4fbf8;border-top:2px solid #c8d7d1;color:#475b55}.practice{background:linear-gradient(135deg,#fff6c6,#fff);border:4px solid #b47d00;border-radius:25px;padding:18px}.prompt{background:#102c28;color:#eafff8;border-radius:16px;padding:14px;white-space:pre-wrap;font-family:ui-monospace,"Cascadia Code",monospace;line-height:1.7;position:relative}.copy{margin-top:10px;border:0;border-radius:999px;background:var(--yellow);color:var(--green);font-weight:1000;padding:9px 14px;cursor:pointer}.glossary details{border:2px solid var(--line);border-radius:16px;background:#fff;margin:8px 0;overflow:hidden}.glossary details>div{padding:0 15px 14px}.cast h3{margin:0 0 12px;color:var(--green)}.castCard{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:18px;padding:9px;margin-bottom:9px}.castCard img{width:62px;height:62px;border-radius:14px;object-fit:cover}.castCard b{display:block}.castCard span{font-size:12px;color:var(--muted);line-height:1.5}.footer{text-align:center;color:#65756f;font-size:13px;margin-top:20px}.sourceBox{font-size:13px;background:#f3f6f5;border:2px dashed #9aaeaa;border-radius:16px;padding:12px}.sourceBox a{color:var(--green);word-break:break-all}
+#zoom{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}#zoom.open{display:flex}#zoom img{max-width:96vw;max-height:90vh;background:white;border:5px solid white;border-radius:18px}#zoom button{position:fixed;right:24px;top:24px;border:0;border-radius:999px;background:var(--yellow);font-weight:1000;padding:10px 15px;cursor:pointer}
+@media(max-width:1200px){.layout{grid-template-columns:260px 1fr}.cast{display:none}}@media(max-width:850px){.layout{grid-template-columns:1fr}.side{position:relative;top:auto;max-height:none}.goalGrid,.grid3,.grid4{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.topin{align-items:flex-start;flex-direction:column}.tools{width:100%}.heroVisual img{max-height:none}}@media(max-width:600px){body{font-size:16px}.line,.line.right{grid-template-columns:58px 1fr}.line.right .avatar{grid-column:1}.line.right .bubble{grid-column:2}.avatar{width:58px;height:58px}.line.right .bubble:before{left:-12px;right:auto;transform:rotate(45deg)}}
+
+/* ===== 左目次：独自プルダウン修正版 ===== */
+.tocDropdown{overflow:hidden}
+.tocToggle{
+  width:100%;
+  border:0;
+  font:inherit;
+  cursor:pointer;
+  padding:15px 16px;
+  font-weight:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  color:var(--ink);
+  background:linear-gradient(90deg,#fff,#fff9d7);
+  text-align:left;
+}
+.tocDropdown.open>.tocToggle{background:var(--yellow)}
+.tocDropdown .tocPanel{display:none}
+.tocDropdown.open .tocPanel{display:block}
+.tocDropdown.open .chev{transform:rotate(-135deg)}
+.tocDropdown .links{display:grid}
+.side .links a{
+  display:block;
+  cursor:pointer;
+}
+.side .links a:focus{
+  outline:4px solid var(--orange);
+  outline-offset:2px;
+}
+.section[id], .hero[id]{
+  scroll-margin-top:115px;
+}
+
+
+/* 午後版：左目次の独自プルダウン */
+.tocDropdown{overflow:hidden}
+.tocToggle{
+  width:100%; border:0; font:inherit; cursor:pointer; padding:15px 16px;
+  font-weight:1000; display:flex; align-items:center; justify-content:space-between;
+  gap:12px; color:var(--ink); background:linear-gradient(90deg,#fff,#fff9d7);
+  text-align:left;
+}
+.tocDropdown.open>.tocToggle{background:var(--yellow)}
+.tocDropdown .tocPanel{display:none}
+.tocDropdown.open .tocPanel{display:block}
+.tocDropdown.open .chev{transform:rotate(-135deg)}
+.tocDropdown .links{display:grid}
+.section[id],.hero[id]{scroll-margin-top:115px}
+.afternoonBadge{display:inline-block;background:#f05a24;color:#fff;padding:4px 10px;border-radius:999px;font-weight:1000;margin-left:8px}
+
+</style>
+</head>
+<body>
+<header class="top">
+<div class="topin">
+<div class="brand">
+<div class="emblem">AI</div>
+<div><b>僕のデザインアカデミア <span class="afternoonBadge">午後</span></b>
+<small>Day7｜AIデザイン・名刺・ロゴ制作</small></div>
+</div>
+<div class="tools">
+<button onclick="document.body.classList.toggle('big')" type="button">文字を大きく</button>
+<button onclick="document.body.classList.toggle('contrast')" type="button">くっきり表示</button>
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" type="button">一番上へ</button>
+</div>
+</div>
+</header>
+<div class="layout">
+<aside class="side">
+<div class="courseCard">
+<strong>ヒロアカ午後</strong>
+<p>Day7前半｜AIデザインと名刺制作<br/>Day7後半｜オリジナル名刺・ロゴ・印刷実践</p>
+<div class="miniNote">必要な項目だけプルダウンで開けばOK。</div>
+</div>
+<div class="tocTitle">授業メニュー</div>
+<div class="dayBlock tocDropdown">
+<button aria-expanded="false" class="tocToggle" type="button"><span>Day7前半｜AIデザインと名刺制作</span><i class="chev"></i></button>
+<div class="tocPanel"><nav class="links">
+<a href="#day7-start">今日のゴール</a>
+<a href="#day7-genspark">ジェンスパークAIデザイナー</a>
+<a href="#day7-genspark-tech">AIで修正するコツ</a>
+<a href="#day7-card-basics">名刺の基本</a><a href="#day7-card-workflow">作り方ワークフロー</a><a href="#day7-card-canva">Canvaで作る手順</a><a href="#day7-card-space">余白と情報整理</a><a href="#day7-card-print">サイズ・比率・印刷</a><a href="#day7-card-sales">仕事につながる名刺</a><a href="#day7-mission">実習ミッション</a><a href="#day7-videos">参考動画</a></nav></div>
+</div><div class="dayBlock tocDropdown"><button aria-expanded="false" class="tocToggle" type="button"><span>Day7後半｜名刺・ロゴ・印刷実践</span><i class="chev"></i></button><div class="tocPanel"><nav class="links"><a href="#day7-back-start">後半のゴール</a><a href="#day7-back-card-strategy">覚えてもらえる名刺</a><a href="#day7-back-raksul">Canva→ラクスル印刷</a><a href="#day7-back-logo">Canvaロゴ5ステップ</a><a href="#day7-back-color-card">名刺のカラーハーモニー</a><a href="#day7-back-color-print">RGB・CMYKと印刷色</a><a href="#day7-back-color-logo">ロゴの配色テクニック</a><a href="#day7-back-assets">配色をブランド資産化</a><a href="#day7-back-mission">実習ミッション</a><a href="#day7-back-videos">参考動画</a></nav></div></div>
+</aside>
+<main class="main">
+<section class="hero" id="day7-start">
+<div class="heroHead">
+<span class="eyebrow">DAY7 FRONT｜ヒロアカ午後</span>
+<h1>AIで下書きを速く。<br/>名刺で「伝えるデザイン」を身につける。</h1>
+<p>パソコンが苦手でも大丈夫。今日は、AIでデザイン案を作り、Canvaで91×55mmの名刺を1枚完成させれば合格。</p>
+</div>
+<div class="heroVisual"><img alt="Day7前半 ジェンスパークAIデザイナー入門" src="./day7_01_genspark_ai_designer.png"/></div>
+<div class="goalGrid">
+<div class="goal"><b>① AIでたたき台を作る</b>短い指示から案を出し、必要な所だけ直す。</div>
+<div class="goal"><b>② 名刺の基本を知る</b>91×55mm、余白、情報の優先順位を覚える。</div>
+<div class="goal"><b>③ Canvaで1枚完成</b>名前・連絡先・ロゴを整え、印刷前チェックまで行う。</div>
+</div>
+</section>
+<div class="content">
+<section class="section" id="day7-genspark">
+<h2>1. ジェンスパークAIデザイナー｜最初の1案を速く作る</h2>
+<p class="lead">資料では、ジェンスパークのAIデザイナーを使うと、ポスター・チラシ・ロゴ・メニュー・クーポン・SNS投稿・カード・Tシャツなど幅広いデザインのたたき台を作れると紹介されている。</p>
+<div class="panel">
+<span class="sceneLabel">SCENE 01｜AIに全部任せるのではなく、最初の案を作ってもらう</span>
+<div class="dialogue">
+<div class="line"><div class="avatar"><img alt="麗日お茶子" src="./ochaco_uraraka.png"/></div><div class="bubble"><div class="speaker"><b>麗日お茶子</b><span class="role">初心者の疑問</span></div><p>デザインって、白紙を見ると何から始めたらええか分からん……。</p></div></div>
+<div class="line right"><div class="avatar"><img alt="緑谷出久" src="./midoriya_izuku.png"/></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">かみ砕き役</span></div><p>最初の案だけAIに作ってもらえばいいんだ。短いプロンプトでも始められて、テンプレートから修正もできるよ。</p><span class="easy">AIは「完成品を丸投げする相手」ではなく「白紙をなくす相手」と考えると使いやすい。</span></div></div>
+<div class="line"><div class="avatar"><img alt="爆豪勝己" src="./katsuki_bakugo.png"/></div><div class="bubble"><div class="speaker"><b>爆豪勝己</b><span class="role">注意役</span></div><p>最後は人間が見ろ！ 文字、価格、商標、印刷サイズまで確認して初めて実用品だ！</p></div></div>
+</div></div>
+<div class="grid4">
+<div class="card"><b>短い指示で開始</b><p>「夏のカフェメニューを作って」程度から始め、後で条件を足す。</p></div>
+<div class="card"><b>テンプレートを使う</b><p>ゼロから作らず、近いデザインを選んで時短する。</p></div>
+<div class="card"><b>AI＋直接編集</b><p>日本語化、価格変更、色変更、文字追加、配置調整を組み合わせる。</p></div>
+<div class="card"><b>出力して仕上げる</b><p>資料ではSVGやPDFへのエクスポートにも触れられている。</p></div>
+</div>
+<div class="warning"><b>ロゴの注意：</b>資料では、AIやテンプレート由来のロゴは商標登録用途に向きにくいとして、正式利用時の確認を勧めている。</div>
+</section>
+<section class="section" id="day7-genspark-tech">
+<h2>2. AIデザインを実用レベルへ近づけるコツ</h2>
+<p class="lead">最初の出力をそのまま使うのではなく、「日本語にする」「価格を直す」「目立たせたい言葉を追加する」「色と位置を整える」と小さく修正していく。</p>
+<div class="diagram"><img alt="ジェンスパーク活用テクニック" src="./day7_07_genspark_ai_techniques.png"/><div class="cap">短い指示 → テンプレート → 日本語化・価格変更 → 文字・色・配置調整 → SVG/PDF出力という流れ。</div></div>
+<div class="grid3">
+<div class="card"><b>変更は1回に1テーマ</b><p>「日本語化して」「価格を980円に」「セール文字を追加」のように分けると確認しやすい。</p></div>
+<div class="card"><b>複数案を比較する</b><p>AIが提案する星・花などの別バリエーションを並べ、目的に近い案を選ぶ。</p></div>
+<div class="card"><b>ノートに残す</b><p>生成案・コンセプト・修正方針をまとめると、提案やチーム共有に使いやすい。</p></div>
+</div>
+</section>
+<section class="section" id="day7-card-basics">
+<h2>3. 名刺デザインの基本｜小さい紙にデザイン基礎が全部入っている</h2>
+<p class="lead">名刺は、名前・肩書き・会社情報・連絡先・ロゴなどを小さな紙面へ整理する練習。余白、情報整理、文字組み、視線誘導、印刷知識をまとめて学べる。</p>
+<div class="diagram"><img alt="名刺デザインの基本" src="./day7_02_business_card_basics.png"/><div class="cap">91×55mm、3つの情報グループ、名前を主役にする考え方、基本配置を確認。</div></div>
+<div class="grid3">
+<div class="card"><b>① 名前グループ</b><p>名前を最も大きく。読み方や肩書きは補助情報として扱う。</p></div>
+<div class="card"><b>② 会社・連絡先</b><p>会社名、電話、メール、住所、Webなどをひとまとまりにする。</p></div>
+<div class="card"><b>③ ロゴ</b><p>情報と競争しない大きさで配置。資料では右上配置を基本例としている。</p></div>
+</div>
+</section>
+<section class="section" id="day7-card-workflow">
+<h2>4. 名刺の作り方ワークフロー｜考える → 整える → 仕上げる</h2>
+<p class="lead">いきなりCanvaを開くより、先に「目的・載せる情報・優先順位」を整理すると迷いにくい。</p>
+<div class="diagram"><img alt="名刺の作り方ワークフロー" src="./day7_03_business_card_workflow.png"/><div class="cap">目的決定 → 情報収集 → 3グループ化 → 主役決定 → ラフ → Canva → 余白調整 → QR/SNS → 印刷確認。</div></div>
+<div class="success"><b>初心者の最短ルート：</b>名刺を「名前」「会社・連絡先」「ロゴ」の3箱に分け、名前を一番大きくする。これだけでもかなり整理される。</div>
+</section>
+<section class="section" id="day7-card-canva">
+<h2>5. Canvaで名刺を作る手順</h2>
+<p class="lead">Canvaでは、最初に日本標準サイズの91mm×55mmを設定し、ガイドと余白を意識しながら情報を置いていく。</p>
+<div class="diagram"><img alt="Canvaで名刺を作る手順" src="./day7_04_canva_business_card_steps.png"/><div class="cap">Canvaを開く → 91×55mm → ガイド → 名前 → 会社情報 → ロゴ・QR → 左揃えと字間 → PDF印刷で保存。</div></div>
+<div class="grid4">
+<div class="card"><b>サイズ</b><p>91mm×55mmを基本にする。</p></div>
+<div class="card"><b>名前</b><p>名刺の主役。最初に大きさを決める。</p></div>
+<div class="card"><b>フォント</b><p>クセの少ないゴシック体など、長く使いやすいものから選ぶ。</p></div>
+<div class="card"><b>QR・SNS</b><p>Web、Instagram、Xなど、連絡されやすい導線として使う。</p></div>
+</div>
+</section>
+<section class="section" id="day7-card-space">
+<h2>6. 余白と情報整理｜ごちゃごちゃ名刺を見やすくする</h2>
+<p class="lead">余白は「空いていてもったいない場所」ではなく、情報を分けて読みやすくするためのスペース。</p>
+<div class="diagram"><img alt="余白と情報整理の名刺デザイン術" src="./day7_05_whitespace_information_design.png"/><div class="cap">情報を3グループに分ける、グループ間に余白を空ける、左揃えにする、名前を一番大きくする。</div></div>
+<div class="grid3">
+<div class="card"><b>似た情報をまとめる</b><p>電話・メール・住所などは同じグループに置く。</p></div>
+<div class="card"><b>グループ間を少し空ける</b><p>会社情報と個人連絡先など、意味の区切りに余白を入れる。</p></div>
+<div class="card"><b>最後は目で見る</b><p>数値は目安。少し離れて見て、違和感があれば微調整する。</p></div>
+</div>
+</section>
+<section class="section" id="day7-card-print">
+<h2>7. 名刺サイズ・比率・印刷の基本</h2>
+<p class="lead">画面で綺麗でも、印刷時に切れたり文字が読めなければ失敗。安全領域と塗り足しを先に覚える。</p>
+<div class="diagram"><img alt="名刺サイズ 比率 印刷の基本" src="./day7_06_business_card_size_print_rules.png"/><div class="cap">91×55mm、安全領域5mm、塗り足し3mm、横型・縦型、QR配置、小さい文字の印刷確認。</div></div>
+<div class="grid3">
+<div class="card"><b>安全領域 5mm</b><p>名前や電話番号など重要情報は端から5mm以上内側へ置く。</p></div>
+<div class="card"><b>塗り足し 3mm</b><p>背景色を端まで出す場合、外側へ3mmほど余分に伸ばす。</p></div>
+<div class="card"><b>紙で確認</b><p>住所や電話番号など小さい文字は、実際に印刷して読めるか確認する。</p></div>
+</div>
+</section>
+<section class="section" id="day7-card-sales">
+<h2>8. 仕事につながる名刺｜連絡先だけで終わらせない</h2>
+<p class="lead">資料では、名刺の裏面にサービス内容、SNS、QRコード、強みなどを載せ、営業ツールとして使う案も紹介されている。</p>
+<div class="diagram"><img alt="仕事につながる名刺アイデア" src="./day7_08_business_card_sales_ideas.png"/><div class="cap">裏面のサービス紹介、QRコード、SNS、強み、普通用と営業用の2種類を使い分けるアイデア。</div></div>
+<div class="grid4">
+<div class="card"><b>裏面にサービス</b><p>バナー、LP、SNS画像など、できる仕事を簡潔に載せる。</p></div>
+<div class="card"><b>QRコード</b><p>ポートフォリオやSNSへすぐ移動できるようにする。</p></div>
+<div class="card"><b>強みを一言</b><p>「最短当日納品」など、相手に伝えたい特徴を短く載せる。</p></div>
+<div class="card"><b>2種類を使い分け</b><p>通常用のシンプル名刺と、仕事獲得用のアピール名刺を分けてもよい。</p></div>
+</div>
+</section>
+<section class="section" id="day7-mission">
+<h2>9. Day7前半 実習ミッション</h2>
+<div class="practice">
+<b>MISSION｜Canvaで名刺を1枚完成させる</b>
+<ol>
+<li>名刺の目的を1つ決める。</li>
+<li>載せる情報を「名前」「会社・連絡先」「ロゴ」に分ける。</li>
+<li>Canvaで91mm×55mmを作る。</li>
+<li>重要情報を端から5mm以上内側へ置く。</li>
+<li>背景を端まで使うなら3mmの塗り足しを意識する。</li>
+<li>名前を最も大きくし、左揃えと字間を整える。</li>
+<li>必要ならQRコードやSNSを追加する。</li>
+<li>紙に印刷し、小さい文字が読めるか確認する。</li>
+</ol>
+</div>
+<div class="practice" style="margin-top:14px">
+<b>そのまま使えるAIへの依頼例</b>
+<div class="prompt" id="day7Prompt">Webデザイナー向けの名刺案を3案考えてください。
+サイズ：91mm×55mm
+雰囲気：シンプル、信頼感、少し若々しい
+載せる情報：名前、肩書き、電話、メール、Webサイト、QRコード
+名前を一番目立たせ、余白を広めにしてください。
+3案それぞれ、色とレイアウトの違いも説明してください。</div>
+<button class="copy" onclick="copyText('day7Prompt',this)" type="button">AI依頼文をコピー</button>
+</div>
+</section>
+<section class="section" id="day7-videos">
+<h2>10. Day7前半｜参考動画</h2>
+<div class="sourceBox">
+<b>今回の参考動画</b><br/><br/>
+<a href="https://www.youtube.com/watch?v=p6lGDciOHAA&amp;list=PLbtkgSIBRib8&amp;index=1" rel="noopener" target="_blank">▶ 参考動画1｜ジェンスパークAIデザイナー</a><br/>
+<a href="https://www.youtube.com/watch?v=re9VJDf6wF8&amp;list=PLbtkgSIBRib8&amp;index=2" rel="noopener" target="_blank">▶ 参考動画2｜名刺デザイン・余白と情報整理</a>
+</div>
+</section>
+<section class="section" id="day7-back-videos">
+<h2>20. Day7後半｜参考動画</h2>
+<div class="sourceBox">
+<b>Canva名刺・ロゴ制作の参考動画</b><br/><br/>
+<a href="https://www.youtube.com/watch?v=XNYxybelmrc&amp;list=PLSDFdQoB_LhQ&amp;index=1" rel="noopener" target="_blank">▶ 参考動画1｜Canvaでオリジナル名刺制作・印刷</a><br/>
+<a href="https://www.youtube.com/watch?v=kPNM14YZAU8&amp;list=PLSDFdQoB_LhQ&amp;index=2" rel="noopener" target="_blank">▶ 参考動画2｜Canvaでオリジナルロゴ制作</a>
+</div>
+</section><section class="section" id="day7-back-mission">
+<h2>19. Day7後半｜実習ミッション</h2>
+<div class="practice">
+<b>MISSION｜名刺1枚＋ロゴ1案を完成させる</b>
+<ol>
+<li>誰に渡す名刺か決める。</li>
+<li>相手に伝えるメリットを1つ決める。</li>
+<li>色を2色程度に絞り、同系色の濃淡を作る。</li>
+<li>Canvaで名刺を作り、QRコードを入れる。</li>
+<li>91mm×55mm、安全領域5mm、塗り足し3mmを確認する。</li>
+<li>ロゴのコンセプトを3行で書く。</li>
+<li>参考デザインを3つ集め、AIで案を出す。</li>
+<li>Canvaで1案を仕上げ、名刺へ置いて小さくても見えるか確認する。</li>
+<li>印刷用の色・文字を確認する。</li>
+</ol>
+</div>
+<div class="practice" style="margin-top:14px">
+<b>AIにそのまま渡せるロゴ案プロンプト</b>
+<div class="prompt" id="day7BackLogoPrompt">小さなお店向けのロゴアイデアを3案考えてください。
+ブランドの想い：
+地域とのつながりを大切にする。
+親しみやすく、長く愛される。
+自然で温かい印象にしたい。
+
+条件：
+シンプルで小さくしても見やすい。
+色は2〜3色。
+名刺とSNSアイコンの両方で使いやすい。
+各案について「形」「色」「意味」を説明してください。</div>
+<button class="copy" onclick="copyText('day7BackLogoPrompt',this)" type="button">ロゴ指示文をコピー</button>
+</div>
+</section><section class="section" id="day7-back-assets">
+<h2>18. カラーハーモニー応用④｜良い配色をブランド資産として残す</h2>
+<p class="lead">「今回いい色ができた」で終わらせず、次の名刺・ロゴ・SNS・チラシでも使えるように保存しておくと、毎回ゼロから色を考えなくて済む。</p>
+<div class="grid4">
+<div class="card"><b>カラーコードを保存</b><p>使った色のHEXコードをメモする。</p></div>
+<div class="card"><b>ブランドキット</b><p>使える環境ならブランド色・フォント・ロゴをまとめる。</p></div>
+<div class="card"><b>横展開</b><p>名刺→SNS→チラシ→資料で同じ色を使い、統一感を出す。</p></div>
+<div class="card"><b>改善履歴</b><p>印刷で暗かった色などを記録し、次回は調整済みの値から始める。</p></div>
+</div>
+<div class="success"><b>最終目標：</b>「毎回色を考える人」から「自分のブランド色を持っている人」へ。制作時間も迷いも減る。</div>
+<div class="diagram"><img alt="名刺とロゴの配色をブランド資産として残す" src="./day7_back_images/day7b_08_brand_color_assetization.png"/><div class="cap">配色・ロゴ・フォント・印刷結果を保存し、次の制作へ再利用する。</div></div>
+</section><section class="section" id="day7-back-color-logo">
+<h2>17. カラーハーモニー応用③｜ロゴの色を決める4パターン</h2>
+<p class="lead">ロゴの形が決まったら、Day6のカラーハーモニーを使って配色案を比較する。最初から1案に決めず、同じロゴを色だけ変えて見比べる。</p>
+<div class="grid4">
+<div class="card"><b>同色系</b><p>同じ色相の濃淡。落ち着いて統一感が出やすい。</p></div>
+<div class="card"><b>類似色</b><p>近い色同士。自然・やさしい・親しみのある印象。</p></div>
+<div class="card"><b>反対色</b><p>強いコントラスト。小さなアクセントに使うと目立つ。</p></div>
+<div class="card"><b>トライアド</b><p>3色で変化を出しやすい。ポップなブランドで使いやすい。</p></div>
+</div>
+<div class="warning"><b>ロゴは小さく使うことが多い：</b>色が多すぎると潰れて見えることがある。まず1〜3色程度で試し、名刺・SNSアイコンの小さいサイズでも確認する。</div>
+<div class="diagram"><img alt="ロゴのカラーハーモニー配色テクニック" src="./day7_back_images/day7b_07_color_harmony_logo.png"/><div class="cap">同じロゴを複数配色で比較し、ブランドの印象に一番合う案を選ぶ。</div></div>
+</section><section class="section" id="day7-back-color-print">
+<h2>16. カラーハーモニー応用②｜RGB・CMYKと印刷色</h2>
+<p class="lead">画面で気に入った色が、そのまま紙で同じ見え方になるとは限らない。だから「画面で決める → 印刷を想定 → 試す → 微調整」の順番が大事。</p>
+<div class="grid2">
+<div class="card"><b>RGB</b><p>PC・スマホなど画面で見る色。明るく鮮やかに見えやすい。</p></div>
+<div class="card"><b>CMYK</b><p>印刷用のインクの考え方。鮮やかな色が少し落ち着いて見えることがある。</p></div>
+</div>
+<div class="practice" style="margin-top:14px">
+<b>印刷前の4チェック</b>
+<ol>
+<li>ブランド色が暗く沈みすぎないか</li>
+<li>小さい文字と背景のコントラストは十分か</li>
+<li>QRコードが読み取れるか</li>
+<li>可能なら試し刷り・現物確認をする</li>
+</ol>
+</div>
+<div class="diagram"><img alt="RGBとCMYK 印刷色の確認" src="./day7_back_images/day7b_06_rgb_cmyk_print_color.png"/><div class="cap">画面色と印刷色の違いを理解して、ラクスル入稿前に色と文字を最終確認。</div></div>
+</section><section class="section" id="day7-back-color-card">
+<h2>15. カラーハーモニー応用①｜名刺は2色＋濃淡でまとめる</h2>
+<p class="lead">Day6で学んだ配色ルールを名刺へ応用する。初心者は「メイン色1つ＋補助色1つ」から始めると失敗しにくい。</p>
+<div class="grid3">
+<div class="card"><b>ベース</b><p>白・薄いベージュなど広い面。読みやすさを守る役目。</p></div>
+<div class="card"><b>ブランド色</b><p>自分らしさを表す主役色。ロゴや見出しに使う。</p></div>
+<div class="card"><b>アクセント</b><p>QR・強み・CTAなど、本当に見せたい場所だけ。</p></div>
+</div>
+<div class="success"><b>時短テクニック：</b>同じ緑でも「濃い緑・中間の緑・薄い緑」と濃淡を変えると、色数を増やさず整理しやすい。</div>
+<div class="diagram"><img alt="名刺にカラーハーモニーを使うテクニック" src="./day7_back_images/day7b_05_color_harmony_business_card.png"/><div class="cap">2色程度＋同系色の濃淡を使い、Canva上で統一感のある名刺へ整える。</div></div>
+</section><section class="section" id="day7-back-logo">
+<h2>14. Canvaでオリジナルロゴを作る5ステップ</h2>
+<p class="lead">ロゴは「なんとなく丸くして店名を書く」より、先にブランドの想いを整理すると作りやすい。元資料では5ステップで進めている。</p>
+<div class="grid4">
+<div class="card"><b>① コンセプト整理</b><p>起業した理由、届けたい想い、地域性、商品以外の価値まで言葉にする。</p></div>
+<div class="card"><b>② 参考を集める</b><p>Google画像検索やPinterestで、同業種だけでなく別ジャンルも見る。</p></div>
+<div class="card"><b>③ 生成AIで案出し</b><p>Canva内のロゴ生成アプリを複数試し、気に入った案を参考素材として保存。</p></div>
+<div class="card"><b>④ Canvaで制作</b><p>図形・色・イラスト・文字・円形文字などを組み合わせてシンプルに仕上げる。</p></div>
+</div>
+<div class="panel" style="margin-top:14px">
+<h3>⑤ データを書き出す</h3>
+<ul>
+<li>共有 → ダウンロードから必要なページだけ保存する。</li>
+<li>用途に応じてPNGなどを使い分ける。</li>
+<li>背景透明化は利用プランや機能条件を確認する。</li>
+<li>無料の背景削除サービスを使う場合は、仕上がりと利用規約を確認する。</li>
+</ul>
+</div>
+<div class="success"><b>一番大事：</b>ロゴを作り始める前に、「何を伝えたいブランドなのか」と「どんな見た目が好きか」を整理する。</div>
+<div class="diagram"><img alt="Canvaでロゴを作る5ステップ" src="./day7_back_images/day7b_04_canva_logo_5steps.png"/><div class="cap">コンセプト → 参考収集 → AI案 → Canva制作 → 書き出し。先に考えてから作る。</div></div>
+</section><section class="section" id="day7-back-raksul">
+<h2>13. Canva → ラクスル｜名刺を印刷注文する流れ</h2>
+<p class="lead">元資料では、Canvaで作った名刺をラクスルへ連携して印刷注文する流れが紹介されている。価格や画面表示は変わる可能性があるため、実際の注文時は表示内容を確認する。</p>
+<div class="grid4">
+<div class="card"><b>① Canvaで作る</b><p>テンプレートを参考に、色・文字・写真・QRを自分向けに調整。</p></div>
+<div class="card"><b>② 印刷前チェック</b><p>小さい文字、細い線、QRコード、端の余白を確認する。</p></div>
+<div class="card"><b>③ ラクスルへ入稿</b><p>元資料ではCanvaから直接入稿でき、自動チェックも利用できる流れを紹介。</p></div>
+<div class="card"><b>④ 配送・到着確認</b><p>配送方法を選び、届いたら色・写真・文字の読みやすさを確認する。</p></div>
+</div>
+<div class="warning"><b>価格について：</b>元動画では「100枚499円〜」の例が紹介されているが、料金・送料・仕様は変更される可能性があるため注文画面で確認する。</div>
+<div class="panel" style="margin-top:14px">
+<h3>画面と紙では色が変わることがある</h3>
+<p>PC画面はRGB、印刷はCMYKが基本。元資料では、届いた名刺が少し青み寄りになることも想定して色を調整し、試し刷りや仕上がり確認をする考え方が紹介されている。</p>
+</div>
+<div class="diagram"><img alt="Canvaからラクスルへ名刺を印刷するワークフロー" src="./day7_back_images/day7b_03_business_card_print_workflow.png"/><div class="cap">デザイン → 色と文字確認 → 入稿 → 自動チェック → 配送 → 現物確認までを一連の工程として覚える。</div></div>
+</section><section class="section" id="day7-back-card-strategy">
+<h2>12. 覚えてもらえる名刺を作る｜作る前に「誰に・何を」を決める</h2>
+<p class="lead">名刺の完成度は、Canvaを開く前にかなり決まる。先に目的・相手・載せる情報を整理すると、デザインで迷いにくい。</p>
+<div class="grid3">
+<div class="card"><b>目的を決める</b><p>誰に渡す？ 見た後どうしてほしい？ 「まず存在を知ってもらう」でもOK。</p></div>
+<div class="card"><b>相手のメリット</b><p>自分の肩書きだけでなく、「この人に頼むと何が得られる？」が一目で分かるようにする。</p></div>
+<div class="card"><b>載せる情報</b><p>肩書き、名前、サービス、キャッチコピー、実績、連絡先、QR、顔写真や特徴的なイラストなど。</p></div>
+</div>
+<div class="grid2">
+<div class="card"><b>コンセプトと印象</b><p>自分が好きな見た目だけで決めず、「信頼」「親しみ」「高級感」など、相手に与えたい印象から逆算する。</p></div>
+<div class="card"><b>参考を集める</b><p>Pinterest・書籍・Canvaテンプレートなどで、雰囲気・余白・文字の大きさ・レイアウトを研究する。</p></div>
+</div>
+<div class="success"><b>初心者ルール：</b>色はまず2色程度。さらに同系色の濃淡を使えば、増やしすぎず統一感を出しやすい。</div>
+<div class="diagram"><img alt="印象に残る名刺デザインの考え方" src="./day7_back_images/day7b_02_memorable_business_card_design.png"/><div class="cap">目的・情報整理・相手のメリット・自分らしさを順番に整理してからCanvaへ進む。</div></div>
+</section><section class="section" id="day7-back-start">
+<h2>11. Day7後半｜オリジナル名刺・ロゴ・印刷実践</h2>
+<p class="lead">前半で「名刺の基本」を覚えたので、後半はもう一歩実務寄りへ進む。ポイントは、<span class="term">覚えてもらえる名刺</span>、<span class="term">相手にメリットが伝わる内容</span>、<span class="term">Canvaから印刷までつなげる流れ</span>、そして<span class="term">自分の想いを形にしたロゴ</span>の4つ。</p>
+<div class="panel">
+<span class="sceneLabel">SCENE 02｜名刺は連絡先カードではなく「小さな営業ツール」</span>
+<div class="dialogue">
+<div class="line"><div class="avatar"><img alt="麗日お茶子" src="./ochaco_uraraka.png"/></div><div class="bubble"><div class="speaker"><b>麗日お茶子</b><span class="role">初心者の疑問</span></div><p>名前と電話番号さえ書いとけば、名刺ってそれで十分ちゃうん？</p></div></div>
+<div class="line right"><div class="avatar"><img alt="緑谷出久" src="./midoriya_izuku.png"/></div><div class="bubble"><div class="speaker"><b>緑谷出久</b><span class="role">かみ砕き役</span></div><p>もちろん連絡先は大事。でも仕事につなげたいなら、<span class="term">「この人に頼むと何が得られるか」</span>まで伝えると記憶に残りやすいよ。</p><span class="easy">まずは「存在を知ってもらう」だけでも立派なゴール。全部売り込まなくていい。</span></div></div>
+<div class="line"><div class="avatar"><img alt="爆豪勝己" src="./katsuki_bakugo.png"/></div><div class="bubble"><div class="speaker"><b>爆豪勝己</b><span class="role">一言まとめ</span></div><p>テンプレそのまま配って終わるな！ 自分の強みを1個だけでも足せ！</p></div></div>
+</div></div>
+<div class="goalGrid">
+<div class="goal"><b>① 印象に残す</b>テンプレートを土台にして、自分らしい色・写真・イラスト・言葉を足す。</div>
+<div class="goal"><b>② メリットを伝える</b>「何ができる人か」「頼むとどう助かるか」を短く入れる。</div>
+<div class="goal"><b>③ 印刷までやる</b>Canvaで作って終わらず、色・文字・QRを確認して注文まで進む。</div>
+</div>
+<div class="diagram"><img alt="Day7後半 Canvaとラクスルで名刺・ロゴを作る" src="./day7_back_images/day7b_01_canva_raksul_business_card.png"/><div class="cap">Day7後半の全体像。名刺は営業ツール、ロゴはブランドの顔として考える。</div></div>
+</section><div class="footer">僕のデザインアカデミア｜ヒロアカ午後 Day7｜前半・後半 完成版</div>
+</div>
+</main>
+<aside class="cast">
+<h3>登場人物</h3>
+<div class="castCard"><img alt="緑谷出久" src="./midoriya_izuku.png"/><div><b>緑谷出久</b><span>初心者と一緒に手順を整理する。</span></div></div>
+<div class="castCard"><img alt="麗日お茶子" src="./ochaco_uraraka.png"/><div><b>麗日お茶子</b><span>PCが苦手な人の疑問を代弁する。</span></div></div>
+<div class="castCard"><img alt="爆豪勝己" src="./katsuki_bakugo.png"/><div><b>爆豪勝己</b><span>ミスしやすい所を強く指摘する。</span></div></div>
+<div class="castCard"><img alt="轟焦凍" src="./shoto_todoroki.png"/><div><b>轟焦凍</b><span>要点を短く整理する。</span></div></div>
+<div class="castCard"><img alt="八百万百" src="./momo_yaoyorozu.png"/><div><b>八百万百</b><span>印刷や実務の注意点をまとめる。</span></div></div>
+</aside>
+</div>
+<div id="zoom" onclick="closeZoom(event)"><button onclick="closeZoom(event)" type="button">閉じる ✕</button><img alt="拡大画像" id="zoomImg"/></div>
+<script>
+document.querySelectorAll('.diagram img,.heroVisual img').forEach(img=>img.addEventListener('click',()=>{document.getElementById('zoomImg').src=img.src;document.getElementById('zoom').classList.add('open')}));
+function closeZoom(e){if(e)e.stopPropagation();document.getElementById('zoom').classList.remove('open')}
+function copyText(id,btn){const t=document.getElementById(id).innerText;navigator.clipboard.writeText(t).then(()=>{const old=btn.textContent;btn.textContent='コピーした！';setTimeout(()=>btn.textContent=old,1600)}).catch(()=>{btn.textContent='選択してコピーしてね'})}
+
+(function(){
+  const sidebar=document.querySelector('aside.side');
+  if(!sidebar)return;
+  sidebar.querySelectorAll('.tocToggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const box=btn.closest('.tocDropdown');
+      const open=box.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+  sidebar.querySelectorAll('a[href^="#"]').forEach(link=>{
+    link.addEventListener('click',function(e){
+      const id=decodeURIComponent(this.getAttribute('href').slice(1));
+      const target=document.getElementById(id);
+      if(!target)return;
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      history.pushState(null,'','#'+encodeURIComponent(id));
+    });
+  });
+})();
+</script>
+</body>
+</html>
